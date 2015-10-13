@@ -39,7 +39,8 @@ class FseventsToVm
     %x{/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/gem list -i -v '#{VERSION}' fsevents_to_vm}
     return if $?.success? and File.exists? BIN_PATH
     puts "Installing fsevents_to_vm, this will require sudo"
-    system!("installing", "sudo", "/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/gem", "install", "--no-rdoc", "--no-ri", "fsevents_to_vm", "-v", VERSION)
+    system!("installing", "sudo", "/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/gem", "install", "--no-rdoc", "--no-ri",
+            "-n", "/usr/local/bin", "fsevents_to_vm", "-v", VERSION)
   end
 
   def increase_inotify_limit
