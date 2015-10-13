@@ -5,7 +5,7 @@ DINGHY_VERSION='4.0.4'
 class Dinghy < Formula
   homepage 'https://github.com/scooterXL/dinghy'
   url  'https://github.com/scooterXL/dinghy.git', tag: "v#{DINGHY_VERSION}"
-  head 'https://github.com/scooterXK/dinghy.git', branch: :master
+  head 'https://github.com/scooterXL/dinghy.git', branch: :master
   version DINGHY_VERSION
 
   depends_on 'docker'
